@@ -6,7 +6,7 @@ import { useCopyToClipboard } from 'usehooks-ts';
 import { Vote } from '@/lib/supabase/types';
 import { getMessageIdFromAnnotations } from '@/lib/utils';
 
-import { CopyIcon, ThumbDownIcon, ThumbUpIcon } from './icons';
+import { CopyIcon, ThumbDownIcon, ThumbUpIcon } from '@/components/chat/icons';
 import { Button } from '../ui/button';
 import {
   Tooltip,

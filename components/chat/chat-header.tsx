@@ -9,7 +9,7 @@ import { SidebarToggle } from '@/components/chat/sidebar-toggle';
 import { Button } from '@/components/ui/button';
 import { BetterTooltip } from '@/components/ui/tooltip';
 
-import { PlusIcon, VercelIcon } from './icons';
+import { PlusIcon, VercelIcon } from '@/components/chat/icons';
 import { useSidebar } from '../ui/sidebar';
 
 export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {

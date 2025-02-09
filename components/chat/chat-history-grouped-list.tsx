@@ -22,7 +22,7 @@ import {
 } from '@/components/ui/sidebar';
 import { Chat } from '@/lib/supabase/types';
 
-import { MoreHorizontalIcon, TrashIcon } from './icons';
+import { MoreHorizontalIcon, TrashIcon } from '@/components/chat/icons';
 
 type GroupedChats = {
   today: Chat[];

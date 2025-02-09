@@ -6,7 +6,7 @@ import { useWindowSize } from 'usehooks-ts';
 
 import { UISuggestion } from '@/lib/editor/suggestions';
 
-import { CrossIcon, MessageIcon } from './icons';
+import { CrossIcon, MessageIcon } from '@/components/chat/icons';
 import { Button } from '../ui/button';
 
 export const Suggestion = ({

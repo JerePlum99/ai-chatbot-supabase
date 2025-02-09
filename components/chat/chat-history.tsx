@@ -2,8 +2,8 @@ import { Suspense } from 'react';
 
 import { getChatsByUserId } from '@/db/cached-queries';
 
-import { ChatHistoryClient } from './chat-history-client';
-import { ChatHistorySkeleton } from './chat-history-skeleton';
+import { ChatHistoryClient } from '@/components/chat/chat-history-client';
+import { ChatHistorySkeleton } from '@/components/chat/chat-history-skeleton';
 
 export async function ChatHistory({ userId }: { userId: string }) {
   const chats = await getChatsByUserId(userId);

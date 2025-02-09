@@ -7,13 +7,13 @@ import { Dispatch, SetStateAction } from 'react';
 
 import { Vote } from '@/lib/supabase/types';
 
-import { UIBlock } from './block';
-import { DocumentToolCall, DocumentToolResult } from './document';
-import { SparklesIcon } from './icons';
-import { Markdown } from './markdown';
-import { MessageActions } from './message-actions';
-import { PreviewAttachment } from './preview-attachment';
-import { Weather } from './weather';
+import { UIBlock } from '@/components/chat/block';
+import { DocumentToolCall, DocumentToolResult } from '@/components/chat/document';
+import { SparklesIcon } from '@/components/chat/icons';
+import { Markdown } from '@/components/chat/markdown';
+import { MessageActions } from '@/components/chat/message-actions';
+import { PreviewAttachment } from '@/components/chat/preview-attachment';
+import { Weather } from '@/components/chat/weather';
 
 export const PreviewMessage = ({
   chatId,

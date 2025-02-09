@@ -1,7 +1,7 @@
 import { SetStateAction } from 'react';
 
-import { UIBlock } from './block';
-import { FileIcon, LoaderIcon, MessageIcon, PencilEditIcon } from './icons';
+import { UIBlock } from '@/components/chat/block';
+import { FileIcon, LoaderIcon, MessageIcon, PencilEditIcon } from '@/components/chat/icons';
 
 const getActionText = (type: 'create' | 'update' | 'request-suggestions') => {
   switch (type) {

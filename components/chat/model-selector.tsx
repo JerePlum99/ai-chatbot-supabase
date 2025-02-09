@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
 
-import { CheckCirclFillIcon, ChevronDownIcon } from './icons';
+import { CheckCirclFillIcon, ChevronDownIcon } from '@/components/chat/icons';
 
 export function ModelSelector({
   selectedModelId,

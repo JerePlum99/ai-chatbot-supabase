@@ -22,15 +22,15 @@ import {
 
 import { fetcher } from '@/lib/utils';
 
-import { DiffView } from './diffview';
-import { DocumentSkeleton } from './document-skeleton';
-import { Editor } from './editor';
-import { CopyIcon, CrossIcon, DeltaIcon, RedoIcon, UndoIcon } from './icons';
-import { PreviewMessage } from './message';
-import { MultimodalInput } from './multimodal-input';
-import { Toolbar } from './toolbar';
-import { useScrollToBottom } from './use-scroll-to-bottom';
-import { VersionFooter } from './version-footer';
+import { DiffView } from '@/components/chat/diffview';
+import { DocumentSkeleton } from '@/components/chat/document-skeleton';
+import { Editor } from '@/components/chat/editor';
+import { CopyIcon, CrossIcon, DeltaIcon, RedoIcon, UndoIcon } from '@/components/chat/icons';
+import { PreviewMessage } from '@/components/chat/message';
+import { MultimodalInput } from '@/components/chat/multimodal-input';
+import { Toolbar } from '@/components/chat/toolbar';
+import { useScrollToBottom } from '@/components/chat/use-scroll-to-bottom';
+import { VersionFooter } from '@/components/chat/version-footer';
 import { Button } from '../ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 

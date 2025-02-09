@@ -13,10 +13,10 @@ import { useScrollToBottom } from '@/components/chat/use-scroll-to-bottom';
 import { Database } from '@/lib/supabase/types';
 import { fetcher } from '@/lib/utils';
 
-import { Block, UIBlock } from './block';
-import { BlockStreamHandler } from './block-stream-handler';
-import { MultimodalInput } from './multimodal-input';
-import { Overview } from './overview';
+import { Block, UIBlock } from '@/components/chat/block';
+import { BlockStreamHandler } from '@/components/chat/block-stream-handler';
+import { MultimodalInput } from '@/components/chat/multimodal-input';
+import { Overview } from '@/components/chat/overview';
 
 type Vote = Database['public']['Tables']['votes']['Row'];
 

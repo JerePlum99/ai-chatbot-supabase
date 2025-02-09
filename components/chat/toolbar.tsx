@@ -25,7 +25,7 @@ import {
   PenIcon,
   StopIcon,
   SummarizeIcon,
-} from './icons';
+} from '@/components/chat/icons';
 import { Button } from '../ui/button';
 
 type ToolProps = {
