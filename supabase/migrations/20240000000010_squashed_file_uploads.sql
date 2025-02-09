@@ -1,7 +1,11 @@
--- Drop existing tables and objects if they exist
-DROP TRIGGER IF EXISTS tr_file_version ON public.file_uploads;
+-- Drop existing functions first
 DROP FUNCTION IF EXISTS set_file_version();
 DROP FUNCTION IF EXISTS get_next_file_version();
+
+-- -- Drop trigger before dropping the table
+-- DROP TRIGGER IF EXISTS tr_file_version ON public.file_uploads;
+
+-- Drop table last
 DROP TABLE IF EXISTS public.file_uploads;
 
 -- Create the file_uploads table with all required columns and constraints
