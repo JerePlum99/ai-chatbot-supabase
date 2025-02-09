@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers';
 
-import { AppSidebar } from '@/components/chat/app-sidebar';
+import { AppSidebar } from '@/components/chat/layout/app-sidebar';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 import { getSession } from '@/db/cached-queries';
 

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { MessageIcon, VercelIcon } from '@/components/chat/icons';
+import { MessageIcon, VercelIcon } from '@/components/chat/ui/icons';
 
 export const Overview = () => {
   return (

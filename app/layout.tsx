@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { Toaster } from 'sonner';
 
-import { ThemeProvider } from '@/components/chat/theme-provider';
+import { ThemeProvider } from '@/components/chat/layout/theme-provider';
 
 import './globals.css';
 

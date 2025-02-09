@@ -9,9 +9,9 @@ import { useWindowSize } from 'usehooks-ts';
 import { Document } from '@/lib/supabase/types';
 import { getDocumentTimestampByIndex } from '@/lib/utils';
 
-import { UIBlock } from '@/components/chat/block';
-import { LoaderIcon } from '@/components/chat/icons';
-import { Button } from '../ui/button';
+import { UIBlock } from '@/components/chat/core/block';
+import { LoaderIcon } from '@/components/chat/ui/icons';
+import { Button } from '../../ui/button';
 
 interface VersionFooterProps {
   block: UIBlock;

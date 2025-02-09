@@ -17,10 +17,10 @@ import { useLocalStorage, useWindowSize } from 'usehooks-ts';
 
 import { sanitizeUIMessages } from '@/lib/utils';
 
-import { ArrowUpIcon, PaperclipIcon, StopIcon } from '@/components/chat/icons';
-import { PreviewAttachment } from '@/components/chat/preview-attachment';
-import { Button } from '../ui/button';
-import { Textarea } from '../ui/textarea';
+import { ArrowUpIcon, PaperclipIcon, StopIcon } from '@/components/chat/ui/icons';
+import { PreviewAttachment } from '@/components/chat/ui/preview-attachment';
+import { Button } from '../../ui/button';
+import { Textarea } from '../../ui/textarea';
 
 const suggestedActions = [
   {

@@ -3,9 +3,9 @@
 import { User } from '@supabase/supabase-js';
 import { useRouter } from 'next/navigation';
 
-import { PlusIcon } from '@/components/chat/icons';
-import { SidebarHistory } from '@/components/chat/sidebar-history';
-import { SidebarUserNav } from '@/components/chat/sidebar-user-nav';
+import { PlusIcon } from '@/components/chat/ui/icons';
+import { SidebarHistory } from '@/components/chat/history/sidebar-history';
+import { SidebarUserNav } from '@/components/auth/sidebar-user-nav';
 import { Button } from '@/components/ui/button';
 import {
   Sidebar,

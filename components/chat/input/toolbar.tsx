@@ -25,8 +25,8 @@ import {
   PenIcon,
   StopIcon,
   SummarizeIcon,
-} from '@/components/chat/icons';
-import { Button } from '../ui/button';
+} from '@/components/chat/ui/icons';
+import { Button } from '../../ui/button';
 
 type ToolProps = {
   type: 'final-polish' | 'request-suggestions' | 'adjust-reading-level';

@@ -1,8 +1,8 @@
 import { JSONValue } from 'ai';
 import { Dispatch, memo, SetStateAction } from 'react';
 
-import { UIBlock } from '@/components/chat/block';
-import { useBlockStream } from '@/components/chat/use-block-stream';
+import { UIBlock } from '@/components/chat/core/block';
+import { useBlockStream } from '@/components/chat/utils/use-block-stream';
 
 interface BlockStreamHandlerProps {
   setBlock: Dispatch<SetStateAction<UIBlock>>;

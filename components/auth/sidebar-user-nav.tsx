@@ -5,7 +5,7 @@ import { ChevronUp } from 'lucide-react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-import { LogoutButton } from '@/components/chat/logout-button';
+import { LogoutButton } from '@/components/auth/logout-button';
 import {
   DropdownMenu,
   DropdownMenuContent,

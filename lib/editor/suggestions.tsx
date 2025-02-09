@@ -3,7 +3,7 @@ import { PluginKey, Plugin } from 'prosemirror-state';
 import { Decoration, DecorationSet, EditorView } from 'prosemirror-view';
 import { createRoot } from 'react-dom/client';
 
-import { Suggestion as PreviewSuggestion } from '@/components/chat/suggestion';
+import { Suggestion as PreviewSuggestion } from '@/components/chat/ui/suggestion';
 import { Suggestion } from '@/lib/supabase/types';
 
 export interface UISuggestion extends Suggestion {

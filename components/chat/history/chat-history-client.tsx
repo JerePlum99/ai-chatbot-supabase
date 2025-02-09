@@ -7,7 +7,7 @@ import useSWR from 'swr';
 import { useSidebar } from '@/components/ui/sidebar';
 import { Chat } from '@/lib/supabase/types';
 
-import { GroupedChatList } from '@/components/chat/chat-history-grouped-list';
+import { GroupedChatList } from '@/components/chat/history/chat-history-grouped-list';
 
 export function ChatHistoryClient({
   initialChats,

@@ -7,16 +7,16 @@ import { useState } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { useWindowSize } from 'usehooks-ts';
 
-import { ChatHeader } from '@/components/chat/chat-header';
-import { PreviewMessage, ThinkingMessage } from '@/components/chat/message';
-import { useScrollToBottom } from '@/components/chat/use-scroll-to-bottom';
+import { ChatHeader } from '@/components/chat/layout/chat-header';
+import { PreviewMessage, ThinkingMessage } from '@/components/chat/core/message';
+import { useScrollToBottom } from '@/components/chat/utils/use-scroll-to-bottom';
 import { Database } from '@/lib/supabase/types';
 import { fetcher } from '@/lib/utils';
 
-import { Block, UIBlock } from '@/components/chat/block';
-import { BlockStreamHandler } from '@/components/chat/block-stream-handler';
-import { MultimodalInput } from '@/components/chat/multimodal-input';
-import { Overview } from '@/components/chat/overview';
+import { Block, UIBlock } from '@/components/chat/core/block';
+import { BlockStreamHandler } from '@/components/chat/utils/block-stream-handler';
+import { MultimodalInput } from '@/components/chat/input/multimodal-input';
+import { Overview } from '@/components/chat/ui/overview';
 
 type Vote = Database['public']['Tables']['votes']['Row'];
 

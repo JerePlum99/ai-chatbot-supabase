@@ -6,14 +6,14 @@ import { useCopyToClipboard } from 'usehooks-ts';
 import { Vote } from '@/lib/supabase/types';
 import { getMessageIdFromAnnotations } from '@/lib/utils';
 
-import { CopyIcon, ThumbDownIcon, ThumbUpIcon } from '@/components/chat/icons';
-import { Button } from '../ui/button';
+import { CopyIcon, ThumbDownIcon, ThumbUpIcon } from '@/components/chat/ui/icons';
+import { Button } from '../../ui/button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '../ui/tooltip';
+} from '../../ui/tooltip';
 
 export function MessageActions({
   chatId,

@@ -1,6 +1,6 @@
 import { Attachment } from 'ai';
 
-import { LoaderIcon } from '@/components/chat/icons';
+import { LoaderIcon } from '@/components/chat/ui/icons';
 
 export const PreviewAttachment = ({
   attachment,

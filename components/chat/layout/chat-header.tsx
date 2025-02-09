@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useWindowSize } from 'usehooks-ts';
 
-import { ModelSelector } from '@/components/chat/model-selector';
-import { SidebarToggle } from '@/components/chat/sidebar-toggle';
+import { ModelSelector } from '@/components/chat/input/model-selector';
+import { SidebarToggle } from '@/components/chat/layout/sidebar-toggle';
 import { Button } from '@/components/ui/button';
 import { BetterTooltip } from '@/components/ui/tooltip';
 
-import { PlusIcon, VercelIcon } from '@/components/chat/icons';
-import { useSidebar } from '../ui/sidebar';
+import { PlusIcon, VercelIcon } from '@/components/chat/ui/icons';
+import { useSidebar } from '../../ui/sidebar';
 
 export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {
   const router = useRouter();

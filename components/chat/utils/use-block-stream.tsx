@@ -4,7 +4,7 @@ import { useSWRConfig } from 'swr';
 
 import { Suggestion } from '@/lib/supabase/types';
 
-import { UIBlock } from '@/components/chat/block';
+import { UIBlock } from '@/components/chat/core/block';
 
 type StreamingDelta = {
   type: 'text-delta' | 'title' | 'id' | 'suggestion' | 'clear' | 'finish';

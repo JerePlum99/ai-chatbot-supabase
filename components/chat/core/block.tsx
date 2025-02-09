@@ -22,17 +22,17 @@ import {
 
 import { fetcher } from '@/lib/utils';
 
-import { DiffView } from '@/components/chat/diffview';
-import { DocumentSkeleton } from '@/components/chat/document-skeleton';
-import { Editor } from '@/components/chat/editor';
-import { CopyIcon, CrossIcon, DeltaIcon, RedoIcon, UndoIcon } from '@/components/chat/icons';
-import { PreviewMessage } from '@/components/chat/message';
-import { MultimodalInput } from '@/components/chat/multimodal-input';
-import { Toolbar } from '@/components/chat/toolbar';
-import { useScrollToBottom } from '@/components/chat/use-scroll-to-bottom';
-import { VersionFooter } from '@/components/chat/version-footer';
-import { Button } from '../ui/button';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
+import { DiffView } from '@/components/chat/core/diffview';
+import { DocumentSkeleton } from '@/components/chat/loading/document-skeleton';
+import { Editor } from '@/components/chat/core/editor';
+import { CopyIcon, CrossIcon, DeltaIcon, RedoIcon, UndoIcon } from '@/components/chat/ui/icons';
+import { PreviewMessage } from '@/components/chat/core/message';
+import { MultimodalInput } from '@/components/chat/input/multimodal-input';
+import { Toolbar } from '@/components/chat/input/toolbar';
+import { useScrollToBottom } from '@/components/chat/utils/use-scroll-to-bottom';
+import { VersionFooter } from '@/components/chat/layout/version-footer';
+import { Button } from '../../ui/button';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
 
 import type { Document, Suggestion, Vote } from '@/lib/supabase/types';
 
