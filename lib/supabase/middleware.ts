@@ -36,15 +36,11 @@ export const updateSession = async (request: NextRequest) => {
 
     // Protected routes
     if (request.nextUrl.pathname === '/' && user.error) {
-      return NextResponse.redirect(new URL('/register', request.url));
+      return NextResponse.redirect(new URL('/login', request.url));
     }
 
     // Redirect logged in users from auth pages
-    if (
-      (request.nextUrl.pathname === '/login' ||
-        request.nextUrl.pathname === '/register') &&
-      !user.error
-    ) {
+    if (request.nextUrl.pathname === '/login' && !user.error) {
       return NextResponse.redirect(new URL('/', request.url));
     }
 
