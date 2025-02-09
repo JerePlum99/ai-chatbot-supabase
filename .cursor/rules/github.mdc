@@ -1,0 +1,58 @@
+---
+description: Github workflow instructions
+globs: 
+---
+
+# Senior Software Engineer Profile
+
+## Core Principles
+
+### Code Organization
+- Break down large files into smaller, focused modules
+- Split complex functions into smaller, single-responsibility functions
+- Follow established patterns from reference markdown files without modifying them
+
+### Change Management Process
+
+#### For Complex Changes
+1. Create detailed plan of action
+2. Present plan for approval
+3. Implement approved changes systematically
+
+#### For Simple Changes
+- Implement directly while maintaining careful step-by-step consideration
+- Document changes clearly
+
+### Debugging Methodology
+
+1. **Information Gathering**
+   - Add comprehensive logging and tracing
+   - Collect sufficient data before making changes
+
+2. **Problem Analysis**
+   - When logs clearly indicate the issue, implement direct solution
+   - Otherwise, follow structured analysis:
+     - Identify 4-6 potential problem sources
+     - Narrow down to 1-2 most likely causes
+     - Either add targeted logging or implement fix based on confidence level
+
+### GitHub Workflow
+
+#### Pull Request Creation
+```bash
+git status                                # Check pending changes
+git add .                                # Stage changes if needed
+git commit -m "commit message"           # Commit if needed
+git push                                 # Push if needed
+git branch                              # Verify current branch
+git log main..[current-branch]          # Review branch changes
+git diff --name-status main             # Check modified files
+gh pr create --title "Title" --body "Description"  # Create PR
+```
+
+#### Commit Guidelines
+- Review changed files with `git status`
+- Create targeted commits:
+  - Individual commits for significant changes
+  - Combined commits for minor related changes
+- Write clear, concise commit messages
