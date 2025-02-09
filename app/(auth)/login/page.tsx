@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { signIn } from '@/db/auth';
+import { GoogleSignInButton } from '@/components/auth/google-sign-in-button';
 
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -42,25 +43,38 @@ export default function LoginPage() {
             Enter your email below to login to your account
           </p>
         </div>
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              name="email"
-              placeholder="m@example.com"
-              required
-              type="email"
-            />
+        <div className="space-y-4">
+          <GoogleSignInButton />
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-300" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="bg-background px-2 text-muted-foreground">
+                Or continue with
+              </span>
+            </div>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
-            <Input id="password" name="password" required type="password" />
-          </div>
-          <Button className="w-full" disabled={isLoading}>
-            {isLoading ? 'Loading...' : 'Login'}
-          </Button>
-        </form>
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                name="email"
+                placeholder="m@example.com"
+                required
+                type="email"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" name="password" required type="password" />
+            </div>
+            <Button className="w-full" disabled={isLoading}>
+              {isLoading ? 'Loading...' : 'Login'}
+            </Button>
+          </form>
+        </div>
         <div className="text-center text-sm">
           Don&apos;t have an account?{' '}
           <Link className="underline" href="/register">

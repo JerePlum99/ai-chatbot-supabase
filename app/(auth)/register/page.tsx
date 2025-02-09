@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { signUp } from '@/db/auth';
+import { GoogleSignInButton } from '@/components/auth/google-sign-in-button';
 
 export default function RegisterPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -39,28 +40,41 @@ export default function RegisterPage() {
         <div className="space-y-2 text-center">
           <h1 className="text-3xl font-bold">Register</h1>
           <p className="text-gray-500 dark:text-gray-400">
-            Enter your information to create an account
+            Create an account to get started
           </p>
         </div>
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              name="email"
-              placeholder="m@example.com"
-              required
-              type="email"
-            />
+        <div className="space-y-4">
+          <GoogleSignInButton />
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-300" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="bg-background px-2 text-muted-foreground">
+                Or continue with
+              </span>
+            </div>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
-            <Input id="password" name="password" required type="password" />
-          </div>
-          <Button className="w-full" disabled={isLoading}>
-            {isLoading ? 'Loading...' : 'Register'}
-          </Button>
-        </form>
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                name="email"
+                placeholder="m@example.com"
+                required
+                type="email"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" name="password" required type="password" />
+            </div>
+            <Button className="w-full" disabled={isLoading}>
+              {isLoading ? 'Loading...' : 'Register'}
+            </Button>
+          </form>
+        </div>
         <div className="text-center text-sm">
           Already have an account?{' '}
           <Link className="underline" href="/login">
