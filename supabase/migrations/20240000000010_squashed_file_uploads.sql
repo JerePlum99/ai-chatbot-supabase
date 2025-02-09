@@ -1,12 +1,13 @@
--- Drop existing functions first
-DROP FUNCTION IF EXISTS set_file_version();
-DROP FUNCTION IF EXISTS get_next_file_version();
-
--- -- Drop trigger before dropping the table
--- DROP TRIGGER IF EXISTS tr_file_version ON public.file_uploads;
-
--- Drop table last
-DROP TABLE IF EXISTS public.file_uploads;
+-- Drop existing tables and objects if they exist within DO $$ block, which will prevent errors if the table does not exist.
+DO $$
+BEGIN
+    IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'file_uploads' AND table_schema = 'public') THEN
+        DROP TRIGGER IF EXISTS tr_file_version ON public.file_uploads;
+        DROP FUNCTION IF EXISTS set_file_version();
+        DROP FUNCTION IF EXISTS get_next_file_version();
+        DROP TABLE IF EXISTS public.file_uploads;
+    END IF;
+END $$;
 
 -- Create the file_uploads table with all required columns and constraints
 CREATE TABLE public.file_uploads (
